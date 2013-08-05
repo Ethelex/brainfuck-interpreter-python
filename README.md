@@ -4,8 +4,9 @@ This is a simple BrainFuck interpreter written in Python 3.3.
 
 ## Instructions
 
-From the Command Prompt:
-    $ python bf.py input.txt
+Input is read from STDIN.
+
+	$ bf.py < input.txt
 
 ## To Do
 

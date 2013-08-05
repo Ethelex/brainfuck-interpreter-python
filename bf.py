@@ -1,7 +1,7 @@
-from os import system
 from collections import defaultdict, Counter
+import sys
 
-brainFuck="""++++++++++[>++++++>++++<<-]>--.>+."""
+brainFuck = str(sys.stdin.read())
 
 valid = "><+-,.[]"
 	
@@ -56,5 +56,3 @@ def main(args):
 		counter+=1
 
 main(parse(brainFuck))
-
-system("pause")
