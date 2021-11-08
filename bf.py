@@ -1,9 +1,12 @@
 from collections import defaultdict, Counter
 import sys
+import json
 
 brainFuck = str(sys.stdin.read())
 
 valid = "><+-,.[]"
+
+defs = json.load(open("defs.json"))
 	
 def parse(brainFuck):
 	leftCounter = rightCounter = 0
@@ -53,6 +56,8 @@ def main(args):
 			key = [y[1] for y in brackets].index(counter)
 			counter = brackets[key][0]
 			continue
+		else:
+			main(parse(defs[char]))
 		counter+=1
 
 main(parse(brainFuck))
